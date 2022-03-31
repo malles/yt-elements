@@ -1,0 +1,58 @@
+{
+    "name": "demo_css",
+    "title": "Demo CSS",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "container": true,
+    "width": 500,
+    "templates": {
+        "render": "./templates/template.php",
+    },
+    "fields": {
+        "primary_color": {
+            "label": "Primary color",
+            "type": "color",
+            "source": true
+        },
+        "secondary_color": {
+            "label": "Secondary color",
+            "type": "color",
+            "source": true
+        },
+        "button_color": {
+            "label": "Image color",
+            "type": "color",
+            "source": true
+        },
+        "background_color": {
+            "label": "Background color",
+            "type": "color",
+            "source": true
+        },
+        "style": {
+            "label": "CSS rules",
+            "type": "textarea",
+            "description": "Use `:primary_color`, `:secondary_color`, `:button_color` and `:background_color` as color placeholder"
+        },
+        "source": "${builder.source}"
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": [
+                        "primary_color",
+                        "secondary_color",
+                        "button_color",
+                        "background_color",
+                        "style"
+                    ]
+                },
+                "${builder.advanced}"
+            ]
+        }
+    }
+}
