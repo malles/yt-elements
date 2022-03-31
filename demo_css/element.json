@@ -7,7 +7,7 @@
     "container": true,
     "width": 500,
     "templates": {
-        "render": "./templates/template.php",
+        "render": "./templates/template.php"
     },
     "fields": {
         "primary_color": {
